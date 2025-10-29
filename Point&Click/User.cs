@@ -12,9 +12,25 @@ namespace Point_Click
         private string name;
         private bool isDead;
 
-        public int Move()
+        public void Move(int roomID)
         {
-            return 0; //formålet er at returnere et roomID som vi kan bruge til at navigere mellem de rum vi har oprettet
+            switch (roomID)
+            {
+                case 1:
+                    Room1Window room1 = new Room1Window();
+                    room1.Show();
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+            }
+            //formålet er at returnere et roomID som vi kan bruge til at navigere mellem de rum vi har oprettet
+        
+        
+        
         }
 
         public Window Menu()
