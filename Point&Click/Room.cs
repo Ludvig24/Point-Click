@@ -44,9 +44,22 @@ namespace Point_Click
 
         
 
-        public void ClickItem()
+        public Item ClickItem(int itemID)
         {
+            int i = 0;
+            while (itemList.Count > i)
+            {
+                if (itemID == itemList[i].GetItemID())
+                {
+                    
+                    return itemList[i];
+                }
 
+                i++;
+                
+            }
+            return null;
+                
         }
     }
 }
