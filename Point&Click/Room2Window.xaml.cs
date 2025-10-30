@@ -34,7 +34,8 @@ namespace Point_Click
             this.room3 = room3;
             this.AllItems = AllItems;
 
-
+             Item kage = new Item();
+             kage = room2.ClickItem(1); // Forsøg af ClickItem
         }
 
         private void GoToRoom1_Click(object sender, RoutedEventArgs e)
@@ -42,6 +43,22 @@ namespace Point_Click
             
             user.Move(room1.GetRoomID(), (Window)this, user, room1, room2, room3, AllItems);
             this.Visibility = Visibility.Hidden;
+        }
+
+
+        private void Ladder_Click(object sender, RoutedEventArgs e)
+        {
+            int ladderID = 2;
+            room2.ClickItem(ladderID);
+            Ladder.Visibility = Visibility.Hidden;
+
+        }
+
+        private void Kage_Click(object sender, RoutedEventArgs e)
+        {
+            int keycardID = 3;
+            room2.ClickItem(keycardID);  //Det er et keycard man får ud af kagen
+           // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
         }
     }
 }

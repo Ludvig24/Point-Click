@@ -79,7 +79,7 @@ namespace Point_Click
 
 
         }
-
+        
         public User GetUser()
         {
             return user;

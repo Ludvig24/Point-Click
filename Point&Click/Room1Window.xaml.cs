@@ -73,9 +73,17 @@ namespace Point_Click
         private void GoToRoom2_Click(object sender, RoutedEventArgs e)
         {
 
+
             user.Move(room2.GetRoomID(), (Window)this, user, room1, room2, room3, AllItems);
            
             this.Visibility = Visibility.Hidden;
+        }
+
+        private void Nøgle_Click(object sender, RoutedEventArgs e)
+        {
+            int nøgleID = 1;
+            room1.ClickItem(nøgleID);
+            Nøgle.Visibility = Visibility.Hidden;
         }
     }
 }

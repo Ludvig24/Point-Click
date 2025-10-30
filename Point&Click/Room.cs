@@ -37,9 +37,10 @@ namespace Point_Click
             Item item = new Item();
             item.SetItemID(id);
             item.SetName(name);
-            
+         
             itemList.Add(item);
 
+            
         }
 
         
@@ -62,4 +63,5 @@ namespace Point_Click
                 
         }
     }
+
 }
