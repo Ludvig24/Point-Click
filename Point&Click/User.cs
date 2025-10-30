@@ -12,7 +12,7 @@ namespace Point_Click
         private string name;
         private bool isDead;
         
-        public void Move(int roomID, Window window, User user, Room room1, Room room2, Room room3, List<Item> AllItems) //vi tager roomID som parameter til at bruge i switch - vi tager vores instans af MainWindow som vi sender med så vi kan bruge de objekter der er initialiseret i MainWindowet i vores andre vinduer
+        public void Move(int roomID, User user, Room room1, Room room2, Room room3, List<Item> AllItems) //vi tager roomID som parameter til at bruge i switch - vi tager vores instans af MainWindow som vi sender med så vi kan bruge de objekter der er initialiseret i MainWindowet i vores andre vinduer
         {
             switch (roomID)
             {

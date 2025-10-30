@@ -41,7 +41,7 @@ namespace Point_Click
         private void GoToRoom1_Click(object sender, RoutedEventArgs e)
         {
             
-            user.Move(room1.GetRoomID(), (Window)this, user, room1, room2, room3, AllItems);
+            user.Move(room1.GetRoomID(), user, room1, room2, room3, AllItems);
             this.Visibility = Visibility.Hidden;
         }
 

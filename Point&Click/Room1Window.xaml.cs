@@ -74,7 +74,7 @@ namespace Point_Click
         {
 
 
-            user.Move(room2.GetRoomID(), (Window)this, user, room1, room2, room3, AllItems);
+            user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems);
            
             this.Visibility = Visibility.Hidden;
         }
