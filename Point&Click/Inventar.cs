@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Point_Click
+{
+    internal class Inventar
+    {
+        private void addItem()
+        {
+        
+        }
+
+        private void deleteItem()
+        {
+        
+        }
+        private void chooseItem()
+        {
+        
+        }
+        /// <Note>
+        /// Indtilvidere så når vi går ind i et nyt rum, så er inventorien tømt, så vi ikke skal implimentere at man gemmer items fra rum til rum
+        /// og hvert lokale ikke behøver at blive resettet
+        /// det vælger vi ud fra om det bliver et langt spil så der er brug for funktionen
+
+       
+       
+        
+
+    }
+}

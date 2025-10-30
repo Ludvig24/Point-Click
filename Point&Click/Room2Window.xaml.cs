@@ -60,5 +60,10 @@ namespace Point_Click
             room2.ClickItem(keycardID);  //Det er et keycard man får ud af kagen
            // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

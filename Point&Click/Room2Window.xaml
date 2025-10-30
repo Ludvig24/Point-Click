@@ -9,8 +9,9 @@
     <Grid RenderTransformOrigin="0.494,0.442">
         <Button x:Name="GoToRoom1" Content="" HorizontalAlignment="Left" Height="138" Margin="10,113,0,0" VerticalAlignment="Top" Width="75" Click="GoToRoom1_Click"/>
         <Button x:Name="Ladder" Content="Ladder" HorizontalAlignment="Center" Margin="0,273,0,0" VerticalAlignment="Top" Height="39" Width="394" Click="Ladder_Click"/>
-        <Rectangle HorizontalAlignment="Left" Height="14" Margin="400,113,0,0" Stroke="Black" VerticalAlignment="Top" Width="110"/>
         <Button x:Name="Kage" Content="Kage" HorizontalAlignment="Left" Margin="429,74,0,0" VerticalAlignment="Top" Height="34" Width="52" Click="Kage_Click"/>
+        <Button x:Name="Hylde" Content="(Hylde)
+                " HorizontalAlignment="Left" Margin="356,108,0,0" VerticalAlignment="Top" Click="Button_Click" Width="198" Height="19"/>
 
     </Grid>
 </Window>
