@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Point_Click
 {
-    internal class Room
+    public class Room
     {
         private int roomID;
         private List<Item> itemList = new List<Item>(); //liste over items i bestemt rum

@@ -27,6 +27,7 @@ namespace Point_Click
         List<Item> AllItems = new List<Item>();
 
         User user = new User();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -79,10 +80,39 @@ namespace Point_Click
 
         }
 
+        public User GetUser()
+        {
+            return user;
+        }
+
+        public Room GetRoom(int id)
+        {
+            switch (id)
+            {
+                case 1:
+                    return room1;
+                case 2:
+                    return room2;
+                case 3:
+                    return room3;
+                default:
+                    return null;
+            }
+            
+        }
+
+        public List<Item> GetItems()
+        {
+            return AllItems;
+        }
+
+      
+
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             
-            user.Move(room1.GetRoomID());
+            user.Move(room1.GetRoomID(), (Window)this, user, room1, room2, room3, AllItems); //this er MainWindow
+            
             this.Visibility = Visibility.Hidden;
         }
     }

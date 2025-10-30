@@ -7,23 +7,30 @@ using System.Windows;
 
 namespace Point_Click
 {
-    internal class User
+    public class User //var internal
     {
         private string name;
         private bool isDead;
-
-        public void Move(int roomID)
+        
+        public void Move(int roomID, Window window, User user, Room room1, Room room2, Room room3, List<Item> AllItems) //vi tager roomID som parameter til at bruge i switch - vi tager vores instans af MainWindow som vi sender med så vi kan bruge de objekter der er initialiseret i MainWindowet i vores andre vinduer
         {
             switch (roomID)
             {
                 case 1:
-                    Room1Window room1 = new Room1Window();
-                    room1.Show();
+                    //MainWindow mainW = (MainWindow)window; //vi konverterer her window objektet til et MainWindow objekt vha cast (MainWindow) vi konverterer eksplicit window objekt til MainWindow
+                    Room1Window room1W = new Room1Window(user, room1, room2, room3, AllItems);
+                    room1W.Show();
+                    
+                    
                     break;
                 case 2:
+                    //Room1Window room1W = (Room1Window)window;
+                    Room2Window room2W = new Room2Window(user, room1, room2, room3, AllItems);
+                    room2W.Show();
                     
                     break;
                 case 3:
+                   
                     
                     break;
             }

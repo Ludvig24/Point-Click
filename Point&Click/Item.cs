@@ -7,7 +7,7 @@ using System.Windows.Controls.Primitives;
 
 namespace Point_Click
 {
-    internal class Item
+    public class Item
     {
         private string name;
         private int ItemID;

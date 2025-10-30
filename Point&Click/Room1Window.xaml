@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Room1Window" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="GoToRoom2" Content="" HorizontalAlignment="Left" Height="214" Margin="684,147,0,0" VerticalAlignment="Top" Width="116" Click="GoToRoom2_Click"/>
+        <Ellipse HorizontalAlignment="Left" Height="12" Margin="694,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="14"/>
+
     </Grid>
 </Window>
