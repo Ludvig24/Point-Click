@@ -11,6 +11,9 @@ using System.Windows.Shapes;
 
 namespace Point_Click
 {
+    // Vi har kodet dette spil sammen, ved vise det på storskærm og snakke om det.
+    // Hvilket betyder, at trods der står eks Tobias commit, så er det lavet i samarbejde
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
