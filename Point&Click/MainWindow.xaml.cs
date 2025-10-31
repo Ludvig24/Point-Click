@@ -39,6 +39,9 @@ namespace Point_Click
         public MainWindow()
         {
             InitializeComponent();
+
+            Inventar inventar = new Inventar();
+            inventar.deleteItem(1);
             
             //Tildeler det første Item objekt et navn og et Id
             item1.SetName("Key"); //Kalder SetName() metoden på item1 og sender parameteren "Key" med
