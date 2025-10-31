@@ -49,8 +49,16 @@ namespace Point_Click
                     itemInUse = inventoryList[i];
                     itemInUse.SetinUse(true);
                 }
+                i++;
             }
         }
+
+
+        public Item GetItemInUse() 
+        {
+            return itemInUse;
+        }
+
 
         /// <Note>
         /// Indtilvidere så når vi går ind i et nyt rum, så er inventorien tømt, så vi ikke skal implimentere at man gemmer items fra rum til rum

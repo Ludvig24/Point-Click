@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,11 +68,19 @@ namespace Point_Click
 
         private void GoToRoom2_Click(object sender, RoutedEventArgs e)
         {
+            Inventar inv;
+            Item itemInUse;
+            inv = user.GetInventar();
+            inv.chooseItem(1);
+            itemInUse = inv.GetItemInUse();
+            if (itemInUse.GetinUse() == true && itemInUse.GetItemID() == 1) 
+            {
+                user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems);
 
+                this.Visibility = Visibility.Hidden;
 
-            user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems);
-           
-            this.Visibility = Visibility.Hidden;
+            } //hvis false så skriv et hint/besked om at døren er låst
+            
         }
 
         private void Nøgle_Click(object sender, RoutedEventArgs e)
