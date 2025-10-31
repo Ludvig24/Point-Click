@@ -38,9 +38,18 @@ namespace Point_Click
         }
 
         //Metode hvor man kan vælge et specifikt Item
-        public void chooseItem()
+        public void chooseItem(int ItemID)
         {
-        
+            int i = 0;
+
+            while (i < inventoryList.Count)
+            {
+                if (inventoryList[i].GetItemID()== ItemID)
+                {
+                    itemInUse = inventoryList[i];
+                    itemInUse.SetinUse(true);
+                }
+            }
         }
 
         /// <Note>

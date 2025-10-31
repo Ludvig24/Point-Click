@@ -59,7 +59,7 @@ namespace Point_Click
             AllItems.Add(item2);
             AllItems.Add(item3);
 
-            //Tildeler user et inventar
+            //Tildeler User et inventar
             user.SetInventar(inventar);
 
 
