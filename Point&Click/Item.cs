@@ -12,12 +12,6 @@ namespace Point_Click
         private string name;
         private int ItemID;
         
-
-        
-        
-        
-
-
         public string GetName()
         {
             return name;
