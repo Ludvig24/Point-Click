@@ -33,9 +33,6 @@ namespace Point_Click
             this.room2 = room2;
             this.room3 = room3;
             this.AllItems = AllItems;
-
-             Item kage = new Item();
-             kage = room2.ClickItem(1); // Forsøg af ClickItem
         }
 
         private void GoToRoom1_Click(object sender, RoutedEventArgs e)
@@ -49,9 +46,8 @@ namespace Point_Click
         private void Ladder_Click(object sender, RoutedEventArgs e)
         {
             int ladderID = 2;
-            room2.ClickItem(ladderID);
             Ladder.Visibility = Visibility.Hidden;
-
+            user.GetInventar().addItem(room2.ClickItem(ladderID));
         }
 
         private void Kage_Click(object sender, RoutedEventArgs e)
