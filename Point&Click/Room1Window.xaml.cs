@@ -71,10 +71,24 @@ namespace Point_Click
             Inventar inv;
             Item itemInUse;
             inv = user.GetInventar();
-            inv.chooseItem(1);
-            itemInUse = inv.GetItemInUse();
-            if (itemInUse.GetinUse() == true && itemInUse.GetItemID() == 1) 
+            //Mandagsproblem:
+            //////////////////
+            
+            inv.chooseItem(1); //choose skal egentlig ikke køre her, men i stedet når vi trykker på et bestemt item i vores inventar i WPF (Mandagsproblem)
+                               
+
+            //////////////////
+
+            if (inv.GetItemInUse() == null)//tjekker om der findes en item i ivn som er inUse - hvis ikke så returner vi ingenting for at hoppe ud af metoden 
             {
+                return;
+
+            }
+
+            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 1) 
+            {
+                inv.deleteItem(1);
+                user.SetInventar(inv);
                 user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems);
 
                 this.Visibility = Visibility.Hidden;

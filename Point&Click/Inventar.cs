@@ -46,17 +46,34 @@ namespace Point_Click
             {
                 if (inventoryList[i].GetItemID()== ItemID)
                 {
-                    itemInUse = inventoryList[i];
-                    itemInUse.SetinUse(true);
+                    inventoryList[i].SetinUse(true);
+                    //itemInUse = inventoryList[i];
+                    //itemInUse.SetinUse(true);
                 }
                 i++;
             }
         }
 
 
-        public Item GetItemInUse() 
+        /*public Item GetItemInUse() 
         {
             return itemInUse;
+        }*/
+
+        public Item GetItemInUse() 
+        {
+            int i = 0;
+          while(i < inventoryList.Count)
+            {
+                if (inventoryList[i].GetinUse() == true) 
+                {
+                 return inventoryList[i];
+                }
+                i++;
+            }
+          
+          return null;
+
         }
 
 
