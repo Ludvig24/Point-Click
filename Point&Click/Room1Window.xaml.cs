@@ -77,7 +77,7 @@ namespace Point_Click
         private void Nøgle_Click(object sender, RoutedEventArgs e)
         {
             int nøgleID = 1;
-            room1.ClickItem(nøgleID);
+            user.GetInventar().addItem(room1.ClickItem(nøgleID));
             Nøgle.Visibility = Visibility.Hidden;
         }
     }

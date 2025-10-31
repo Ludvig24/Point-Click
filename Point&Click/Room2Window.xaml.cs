@@ -53,8 +53,9 @@ namespace Point_Click
         private void Kage_Click(object sender, RoutedEventArgs e)
         {
             int keycardID = 3;
-            room2.ClickItem(keycardID);  //Det er et keycard man får ud af kagen
-           // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
+            //Det er et keycard man får ud af kagen
+            // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
+            user.GetInventar().addItem(room2.ClickItem(keycardID));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
