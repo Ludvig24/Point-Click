@@ -35,14 +35,13 @@ namespace Point_Click
         //Opretter et objekt af klassen User
         User user = new User();
 
-
+        //Opretter et objekt af klassen Inventer
+        Inventar inventar = new Inventar();
+       
         public MainWindow()
         {
             InitializeComponent();
 
-            Inventar inventar = new Inventar();
-            inventar.deleteItem(1);
-            
             //Tildeler det første Item objekt et navn og et Id
             item1.SetName("Key"); //Kalder SetName() metoden på item1 og sender parameteren "Key" med
             item1.SetItemID(1); //Kalder metoden SetItemID() på item1 og sender parameteren 1 med
@@ -60,9 +59,10 @@ namespace Point_Click
             AllItems.Add(item2);
             AllItems.Add(item3);
 
+            //Tildeler user et inventar
+            user.SetInventar(inventar);
 
 
-            
             room1.SetRoomID(1); //Kalder SetRoomID() metoden på room1 objektet og sender parameteren 1 med
             List<Item> room1ItemList = room1.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room1 objektet. Vi tildeler listen room1ItemList den liste der returneres af GetItemList() metoden.
             room1ItemList.Add(AllItems[0]); //Kalder add metoden på listen room1ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room1ItemList
