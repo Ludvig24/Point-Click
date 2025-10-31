@@ -12,19 +12,7 @@ namespace Point_Click
         private string name;
         private bool isDead;
         private Inventar inventar = new Inventar();
-
-
-        public Inventar GetInventar()
-        {
-            return inventar;
-        }
-
-        public Inventar SetInventar()
-        {
-            return inventar;
-        }
-
-        
+    
         public void Move(int roomID, User user, Room room1, Room room2, Room room3, List<Item> AllItems) //vi tager roomID som parameter til at bruge i switch - vi tager vores instans af MainWindow som vi sender med så vi kan bruge de objekter der er initialiseret i MainWindowet i vores andre vinduer
         {
             switch (roomID)
@@ -53,6 +41,16 @@ namespace Point_Click
         public Window Menu()
         {
             return null; //skal returnerer et Menu Window
+        }
+
+        public Inventar GetInventar()
+        {
+            return inventar;
+        }
+
+        public void SetInventar(Inventar inventar)
+        {
+            this.inventar = inventar;
         }
     }
 }

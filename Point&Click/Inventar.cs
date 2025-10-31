@@ -8,15 +8,21 @@ namespace Point_Click
 {
     internal class Inventar
     {
+        private Item itemInUse = new Item();
+
+        // Metode så man kan tilføje Item til ens Inventar
         private void addItem()
         {
         
         }
 
+        //Metode så man sletter Item fra ens Inventar
         private void deleteItem()
         {
         
         }
+
+        //Metode hvor man kan vælge et specifikt Item
         private void chooseItem()
         {
         

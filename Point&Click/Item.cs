@@ -11,7 +11,8 @@ namespace Point_Click
     {
         private string name;
         private int ItemID;
-        
+        private bool inUse = false;
+
         public string GetName()
         {
             return name;
@@ -22,6 +23,12 @@ namespace Point_Click
             this.name = name; 
         }
 
+        public void HoverItem()
+        {
+
+        }
+
+        // Så man kan tilgå ItemID i andre klasser 
         public int GetItemID()
         {
             return ItemID;
@@ -30,14 +37,17 @@ namespace Point_Click
         public void SetItemID(int ItemID)
         {
             this.ItemID = ItemID;
+
         }
 
-
-        public void HoverItem()
+        // Så man kan tilgå inUse i andre klasse
+        public bool GetinUse()
         {
-
+            return inUse;
         }
 
-        
-    }
+        public void SetinUse(bool inuse)
+        {
+            this.inUse = inUse;
+        }
 }
