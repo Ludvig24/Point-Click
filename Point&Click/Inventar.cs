@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Point_Click
-{
-    internal class Inventar
+{ 
+    // Vi har ændet klassen til public, fordi vores construtor i Window filen skabte accesebility problemer
+    // Vi er godt klar over at lave klassen til public nok ikke er det bedste vælg
+    // Men det løste et problem vi blev ved med at sidde fast i
+
+    public class Inventar
     {
         private List<Item> inventoryList = new List<Item>();
         private Item itemInUse = new Item();

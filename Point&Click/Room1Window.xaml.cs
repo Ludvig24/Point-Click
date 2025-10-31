@@ -40,11 +40,6 @@ namespace Point_Click
 
         }
 
-        public User GetUser()
-        {
-            return user;
-        }
-
         public Room GetRoom(int id)
         {
             switch (id)
