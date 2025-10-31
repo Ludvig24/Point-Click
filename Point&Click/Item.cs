@@ -20,7 +20,7 @@ namespace Point_Click
 
         public void SetName(string name)
         {
-            this.name = name; 
+            this.name = name;
         }
 
         public void HoverItem()
@@ -46,8 +46,10 @@ namespace Point_Click
             return inUse;
         }
 
-        public void SetinUse(bool inuse)
+        public void SetinUse(bool inUse)
         {
             this.inUse = inUse;
         }
+
+    }
 }

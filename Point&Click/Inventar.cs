@@ -8,7 +8,7 @@ namespace Point_Click
 {
     internal class Inventar
     {
-        private List<Item> inventoryList = new List<Item>;
+        private List<Item> inventoryList = new List<Item>();
         private Item itemInUse = new Item();
 
         // Metode så man kan tilføje Item til ens Inventar

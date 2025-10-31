@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Point_Click
 {
-    public class User //var internal
+    internal class User //var internal
     {
         private string name;
         private bool isDead;

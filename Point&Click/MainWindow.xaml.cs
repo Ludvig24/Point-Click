@@ -83,25 +83,8 @@ namespace Point_Click
             room3ItemList.Add(AllItems[1]); //Kalder add metoden på listen room3ItemList. Det item objekt i listen AllItems på index 1 tilføjes til listen room3ItemList
             room3ItemList.Add(AllItems[2]); //Kalder add metoden på listen room3ItemList. Det item objekt i listen AllItems på index 2 tilføjes til listen room3ItemList
 
-
-
-
-
-
-
-
-
-
-
         }
         
-
-        //virker ikke til vi bruger denne metode?
-        public User GetUser() //opretter en public metode af typen User vi kalder GetUser()
-        {
-            return user; //metoden returnerer user objektet oprettet tidligere
-        }
-
         public Room GetRoom(int id) //opretter en public metode af typen Room vi kalder GetRoom() som tager en integer som parameter
         {
             switch (id) //der køres et switch case statement på id variablet
