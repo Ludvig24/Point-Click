@@ -23,16 +23,20 @@ namespace Point_Click
     
     public partial class Room1Window : Window
     {
-        private MainWindow mainWindow;
+       
+        private MainWindow mainWindow; //opretter objekt af MainWindow
+        //opretter objekter af User klassen, Room klassen og en Liste af Item objekter
         User user;
         Room room1;
         Room room2;
         Room room3;
         List<Item> AllItems;
 
+        //Constructor for klassen
         public Room1Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
         {
             InitializeComponent();
+            //Tildeler parameterne i constructoren til variablerne user, room1, room2, room3 og AllItems
             this.user = user;
             this.room1 = room1;
             this.room2 = room2;
@@ -40,9 +44,11 @@ namespace Point_Click
             this.AllItems = AllItems;
 
         }
-
+        // Metoden GetRoom - tager en integer id som parameter og returnerer et objekt af klassen room
         public Room GetRoom(int id)
         {
+            // Switch case der kører på id variablen - hver case svarer til et bestemt room id
+            // Hver case returnerer det room objekt hvis id svarer til variablen id
             switch (id)
             {
                 case 1:
@@ -57,20 +63,20 @@ namespace Point_Click
 
         }
 
+        //Metoden GetItems returnerer listen AllItems
         public List<Item> GetItems()
         {
             return AllItems;
         }
 
-        /*public Room1Window(Window main)
-        {
-        }*/
 
+        //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på
         private void GoToRoom2_Click(object sender, RoutedEventArgs e)
         {
+            //Opretter instanser af klasserne Inventar og Item
             Inventar inv;
             Item itemInUse;
-            inv = user.GetInventar();
+            inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
             //Mandagsproblem:
             //////////////////
             
@@ -85,23 +91,26 @@ namespace Point_Click
 
             }
 
-            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 1) 
+            //If statement der checker om et Item objekt i Inventar objektet (inv) er inUse og om det bestemte Item objekts id er lig med 1 
+            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 1) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
             {
-                inv.deleteItem(1);
-                user.SetInventar(inv);
-                user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems);
+                inv.deleteItem(1); // Kalder deleteItem() og sender 1 med som parameter
+                user.SetInventar(inv); //Tildeler inv objektet til user objektets instans af Inventar med SetInventar() metoden
+                user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems); //metoden Move() kaldes på user objektet. der sendes et roomId, User objekt, 3 Room objekter og en liste af Items med som parameter. Vi får roomId ved at kalde metoden GetRoomID() på objektet room2
 
-                this.Visibility = Visibility.Hidden;
+                this.Visibility = Visibility.Hidden; //skjuler vinduet Room1Window ved at sætte Visibility til Hidden
 
             } //hvis false så skriv et hint/besked om at døren er låst
             
         }
 
+        //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på
         private void Nøgle_Click(object sender, RoutedEventArgs e)
         {
-            int nøgleID = 1;
-            user.GetInventar().addItem(room1.ClickItem(nøgleID));
-            Nøgle.Visibility = Visibility.Hidden;
+            int nøgleID = 1; //opretter en int nøgleID og tildeler den 1
+            //Får fat i user objektets Inventar objektet og tildeler den item der blev clicket på (nøglen) til inventaret
+            user.GetInventar().addItem(room1.ClickItem(nøgleID)); //kalder GetInventar() metoden på user objektet for at få det aktuelle inventar i useren. ClickItem kaldes på room1 objektet og nøgleID sendes som parameter - dette returnerer Item objektet der blev klikket på. addItem() metoden kaldes på Item objektet.
+            Nøgle.Visibility = Visibility.Hidden; // Sætter visibility for nøgle objektet i WPF vinduet til hidden
         }
     }
 }
