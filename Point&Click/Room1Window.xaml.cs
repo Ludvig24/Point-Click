@@ -78,8 +78,16 @@ namespace Point_Click
         //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på
         private void GoToRoom2_Click(object sender, RoutedEventArgs e)
         {
-            //Opretter instanser af klasserne Inventar og Item
-            // Lav if sætning om at åbne døren med item!!!!!!!-----------
+            if (InvListBox.SelectedItem == null)
+            { 
+                return;//Her skal vi lave en kommentar om at døren er låst
+            }
+                     //Opretter instanser af klasserne Inventar og Item
+                if ( InvListBox.SelectedItem.ToString() != "Nøgle")
+            { 
+                return;
+            }
+
             Inventar inv;
             Item itemInUse;
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
