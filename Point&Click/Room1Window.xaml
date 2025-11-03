@@ -6,10 +6,29 @@
         xmlns:local="clr-namespace:Point_Click"
         mc:Ignorable="d"
         Title="Room1Window" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.574,0.502" Margin="-10,0,10,0">
         <Button x:Name="GoToRoom2" Content="" HorizontalAlignment="Left" Height="214" Margin="684,147,0,0" VerticalAlignment="Top" Width="116" Click="GoToRoom2_Click"/>
         <Ellipse HorizontalAlignment="Left" Height="12" Margin="694,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="14"/>
         <Button x:Name="Nøgle" Content="Nøgle" HorizontalAlignment="Left" Margin="170,147,0,0" VerticalAlignment="Top" Click="Nøgle_Click" Height="87" Width="132"/>
 
+        <ListBox Height="79" HorizontalAlignment="Left" Margin="226,283,0,0" x:Name="InvListBox" VerticalAlignment="Top" Width="350" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="5 0 10 0" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+            
+            <!---<ListBoxItem Content="Vertical Item 1" />
+            <ListBoxItem Content="Vertical Item 2" />
+            <ListBoxItem Content="Vertical Item 3" />
+            <ListBoxItem Content="Vertical Item 4" />
+            <ListBoxItem Content="Vertical Item 5" />-->
+        </ListBox>
     </Grid>
+
 </Window>

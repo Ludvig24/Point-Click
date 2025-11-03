@@ -21,6 +21,11 @@ namespace Point_Click
             inventoryList.Add(item);
         }
 
+        public List<Item> GetInventoryList()
+        {
+            return inventoryList;
+        }
+
         //Metode så man sletter Item fra ens Inventar
         public void deleteItem(int ItemID)
         {

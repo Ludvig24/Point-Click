@@ -33,6 +33,8 @@ namespace Point_Click
         List<Item> AllItems;
 
         //Constructor for klassen
+
+
         public Room1Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
         {
             InitializeComponent();
@@ -44,6 +46,9 @@ namespace Point_Click
             this.AllItems = AllItems;
 
         }
+
+       
+
         // Metoden GetRoom - tager en integer id som parameter og returnerer et objekt af klassen room
         public Room GetRoom(int id)
         {
@@ -74,6 +79,7 @@ namespace Point_Click
         private void GoToRoom2_Click(object sender, RoutedEventArgs e)
         {
             //Opretter instanser af klasserne Inventar og Item
+            // Lav if sætning om at åbne døren med item!!!!!!!-----------
             Inventar inv;
             Item itemInUse;
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
@@ -111,6 +117,19 @@ namespace Point_Click
             //Får fat i user objektets Inventar objektet og tildeler den item der blev clicket på (nøglen) til inventaret
             user.GetInventar().addItem(room1.ClickItem(nøgleID)); //kalder GetInventar() metoden på user objektet for at få det aktuelle inventar i useren. ClickItem kaldes på room1 objektet og nøgleID sendes som parameter - dette returnerer Item objektet der blev klikket på. addItem() metoden kaldes på Item objektet.
             Nøgle.Visibility = Visibility.Hidden; // Sætter visibility for nøgle objektet i WPF vinduet til hidden
+
+            InvListBox.Items.Add(Nøgle.Content);
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
