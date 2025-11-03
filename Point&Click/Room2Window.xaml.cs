@@ -25,6 +25,8 @@ namespace Point_Click
         Room room2;
         Room room3;
         List<Item> AllItems;
+        bool cakeActive = false;
+
         public Room2Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
         {
             InitializeComponent();
@@ -48,19 +50,48 @@ namespace Point_Click
             int ladderID = 2;
             Ladder.Visibility = Visibility.Hidden;
             user.GetInventar().addItem(room2.ClickItem(ladderID));
+            InvListBox.Items.Add(Ladder.Content);
         }
 
-        private void Kage_Click(object sender, RoutedEventArgs e)
+        private void Kage_Click(object sender, RoutedEventArgs e) //Når man clicker på kagen og går tilbage til rum 1, så driller den
         {
+            if (cakeActive == false)
+            {
+                return;
+            }
             int keycardID = 3;
+
             //Det er et keycard man får ud af kagen
             // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
-            user.GetInventar().addItem(room2.ClickItem(keycardID));
+            user.GetInventar().addItem(room2.ClickItem(keycardID)); 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        private void Shelf_Click(object sender, RoutedEventArgs e)
+        { 
+            if (InvListBox.SelectedItem== null)
+            {
+                return;
+            }
+            if (InvListBox.SelectedItem.ToString() != "Ladder")
+            {
+                return;
+            }
+            Ladder2.Visibility = Visibility.Visible;
+            
+            //Har tilføjet det samme som da vi skulle igennem døren i rum 1, bare uden move
+            Inventar inv;
+            inv = user.GetInventar();
+            inv.chooseItem(2);
 
+            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 2) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
+            {
+
+                inv.deleteItem(2); // Kalder deleteItem() og sender 2 med som parameter
+                user.SetInventar(inv); //Tildeler inv objektet til user objektets instans af Inventar med SetInventar() metoden
+                InvListBox.Items.RemoveAt(InvListBox.Items.IndexOf(InvListBox.SelectedItem));
+
+                cakeActive = true; // og her gør vi at kagen er true, så vi kan bruge det senere
+            }
         }
     }
 }

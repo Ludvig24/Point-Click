@@ -8,10 +8,34 @@
         Title="Room2Window" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.494,0.442">
         <Button x:Name="GoToRoom1" Content="" HorizontalAlignment="Left" Height="138" Margin="10,113,0,0" VerticalAlignment="Top" Width="75" Click="GoToRoom1_Click"/>
-        <Button x:Name="Ladder" Content="Ladder" HorizontalAlignment="Center" Margin="0,273,0,0" VerticalAlignment="Top" Height="39" Width="394" Click="Ladder_Click"/>
+        <Button x:Name="Ladder" Content="Ladder" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Height="39" Width="394" Click="Ladder_Click"/>
         <Button x:Name="Kage" Content="Kage" HorizontalAlignment="Left" Margin="429,74,0,0" VerticalAlignment="Top" Height="34" Width="52" Click="Kage_Click"/>
-        <Button x:Name="Hylde" Content="(Hylde)
-                " HorizontalAlignment="Left" Margin="356,108,0,0" VerticalAlignment="Top" Click="Button_Click" Width="198" Height="19"/>
+        <Button x:Name="Shelf" Content="(Hylde)
+                " HorizontalAlignment="Left" Margin="356,108,0,0" VerticalAlignment="Top" Click="Shelf_Click" Width="198" Height="19"/>
 
+        <ListBox Height="79" HorizontalAlignment="Left" Margin="226,283,0,0" x:Name="InvListBox" VerticalAlignment="Top" Width="350" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="5 0 10 0" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+
+        </ListBox>
+        <Button x:Name="Ladder2" Content="Ladder" HorizontalAlignment="Left" Margin="382,188,0,0" VerticalAlignment="Top" Width="148" Height="22" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>

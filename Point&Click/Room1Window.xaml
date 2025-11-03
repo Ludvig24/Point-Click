@@ -23,11 +23,7 @@
                 </Style>
             </ListBox.ItemContainerStyle>
             
-            <!---<ListBoxItem Content="Vertical Item 1" />
-            <ListBoxItem Content="Vertical Item 2" />
-            <ListBoxItem Content="Vertical Item 3" />
-            <ListBoxItem Content="Vertical Item 4" />
-            <ListBoxItem Content="Vertical Item 5" />-->
+            
         </ListBox>
     </Grid>
 

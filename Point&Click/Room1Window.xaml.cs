@@ -78,7 +78,7 @@ namespace Point_Click
         //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på
         private void GoToRoom2_Click(object sender, RoutedEventArgs e)
         {
-            if (InvListBox.SelectedItem == null)
+            if (InvListBox.SelectedItem == null) //Vi skulle lave denne if sætning, fordi hvis ikke der er noget item i listen som den kan lave om til string, så brokker den sig
             { 
                 return;//Her skal vi lave en kommentar om at døren er låst
             }
@@ -87,9 +87,8 @@ namespace Point_Click
             { 
                 return;
             }
-
-            Inventar inv;
-            Item itemInUse;
+                //Vi har lavet if sætninger, der ser om vi har selected vores item, hvis vi har, så virker "døren"
+            Inventar inv;           
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
             //Mandagsproblem:
             //////////////////
@@ -130,10 +129,7 @@ namespace Point_Click
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+       
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
