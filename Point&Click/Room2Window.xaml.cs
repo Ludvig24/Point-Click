@@ -63,7 +63,8 @@ namespace Point_Click
             InvListBox.Items.Add("Keycard");
             //Det er et keycard man får ud af kagen
             // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
-            user.GetInventar().addItem(room2.ClickItem(keycardID)); 
+            user.GetInventar().addItem(room2.ClickItem(keycardID));
+            Kage.IsEnabled = false;
         }
 
         private void Shelf_Click(object sender, RoutedEventArgs e)
