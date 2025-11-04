@@ -44,6 +44,8 @@ namespace Point_Click
             this.room2 = room2;
             this.room3 = room3;
             this.AllItems = AllItems;
+            
+            
 
         }
 

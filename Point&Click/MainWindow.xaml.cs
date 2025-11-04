@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,7 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Point_Click
+namespace Point_Click 
 {
     // Vi har kodet dette spil sammen, ved vise det på storskærm og snakke om det.
     // Hvilket betyder, at trods der står eks Tobias commit, så er det lavet i samarbejde
@@ -19,8 +20,8 @@ namespace Point_Click
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Opretter 3 objekter af klassen Item
-        Item item1 = new Item();
+        //Opretter 3 objekter af klassen Item // Måske skriv note om nedarvninger
+        Item item1 = new Item();  
         Item item2 = new Item();
         Item item3 = new Item();
 
@@ -38,13 +39,14 @@ namespace Point_Click
         //Opretter et objekt af klassen Inventer
         Inventar inventar = new Inventar();
        
-        public MainWindow()
+        public MainWindow() 
         {
             InitializeComponent();
 
             //Tildeler det første Item objekt et navn og et Id
             item1.SetName("Key"); //Kalder SetName() metoden på item1 og sender parameteren "Key" med
             item1.SetItemID(1); //Kalder metoden SetItemID() på item1 og sender parameteren 1 med
+            
             
             //Tildeler item2 objektet et navn og et Id
             item2.SetName("Ladder"); //Kalder SetName() metoden på item2 og sender parameteren "Ladder" med
