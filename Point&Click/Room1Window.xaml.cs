@@ -85,27 +85,18 @@ namespace Point_Click
                 return;//Her skal vi lave en kommentar om at døren er låst
             }
                      //Opretter instanser af klasserne Inventar og Item
-                if ( InvListBox.SelectedItem.ToString() != "Nøgle")
+            if ( InvListBox.SelectedItem.ToString() != "Nøgle")
             { 
                 return;
             }
                 //Vi har lavet if sætninger, der ser om vi har selected vores item, hvis vi har, så virker "døren"
             Inventar inv;           
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
-           
-            
+
             inv.chooseItem(1);
-                               
 
-
-            if (inv.GetItemInUse() == null)//tjekker om der findes en item i ivn som er inUse - hvis ikke så returner vi ingenting for at hoppe ud af metoden 
-            {
-                return;
-
-            }
-
-            //If statement der checker om et Item objekt i Inventar objektet (inv) er inUse og om det bestemte Item objekts id er lig med 1 
-            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 1) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
+            //If statement der henter det item i inv hvor boolen inUse er true og tjekker om det item er en key.
+            if (inv.GetItemInUse() == AllItems[0]) // GetItemInUse() returner det Item objekt hvor boolen inUse er true. AllItems er listen over alle items i spillet
             {
                 inv.deleteItem(1); // Kalder deleteItem() og sender 1 med som parameter
                 user.SetInventar(inv); //Tildeler inv objektet til user objektets instans af Inventar med SetInventar() metoden
