@@ -35,7 +35,7 @@ namespace Point_Click
         //Constructor for klassen
 
 
-        public Room1Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
+        internal Room1Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
         {
             InitializeComponent();
             //Tildeler parameterne i constructoren til variablerne user, room1, room2, room3 og AllItems
@@ -52,7 +52,7 @@ namespace Point_Click
        
 
         // Metoden GetRoom - tager en integer id som parameter og returnerer et objekt af klassen room
-        public Room GetRoom(int id)
+        internal Room GetRoom(int id)
         {
             // Switch case der kører på id variablen - hver case svarer til et bestemt room id
             // Hver case returnerer det room objekt hvis id svarer til variablen id
@@ -71,7 +71,7 @@ namespace Point_Click
         }
 
         //Metoden GetItems returnerer listen AllItems
-        public List<Item> GetItems()
+        internal List<Item> GetItems()
         {
             return AllItems;
         }

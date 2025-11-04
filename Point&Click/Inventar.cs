@@ -10,7 +10,7 @@ namespace Point_Click
     // Vi er godt klar over at lave klassen til public nok ikke er det bedste vælg
     // Men det løste et problem vi blev ved med at sidde fast i
 
-    public class Inventar
+    internal class Inventar
     {
         private List<Item> inventoryList = new List<Item>();
         private Item itemInUse = new Item();

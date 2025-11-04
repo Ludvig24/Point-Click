@@ -87,7 +87,7 @@ namespace Point_Click
 
         }
         
-        public Room GetRoom(int id) //opretter en public metode af typen Room vi kalder GetRoom() som tager en integer som parameter
+        internal Room GetRoom(int id) //opretter en public metode af typen Room vi kalder GetRoom() som tager en integer som parameter
         {
             switch (id) //der køres et switch case statement på id variablet
             {
@@ -103,7 +103,7 @@ namespace Point_Click
             
         }
 
-        public List<Item> GetItems() //opretter en public metode GetItems(). Metoden returnerer en liste af Item objekter
+        internal List<Item> GetItems() //opretter en public metode GetItems(). Metoden returnerer en liste af Item objekter
         {
             return AllItems; //metoden returnerer listen AllItems
         }

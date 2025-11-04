@@ -27,7 +27,7 @@ namespace Point_Click
         List<Item> AllItems;
         bool cakeActive = false;
 
-        public Room2Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
+        internal Room2Window(User user, Room room1, Room room2, Room room3, List<Item> AllItems)
         {
             InitializeComponent();
             this.user = user;
