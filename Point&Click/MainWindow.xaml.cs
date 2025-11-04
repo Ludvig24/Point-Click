@@ -74,7 +74,7 @@ namespace Point_Click
             List<Item> room2ItemList = room2.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room2 objektet. Vi tildeler listen room2ItemList den liste der returneres af GetItemList() metoden.
             room2ItemList.Add(AllItems[0]); //Kalder add metoden på listen room2ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room2ItemList
             room2ItemList.Add(AllItems[1]); //Kalder add metoden på listen room2ItemList. Det item objekt i listen AllItems på index 1 tilføjes til listen room2ItemList
-
+            room2ItemList.Add(AllItems[2]);
 
 
             room3.SetRoomID(3); //Kalder SetRoomID() metoden på room3 objektet og sender parameteren 3 med
