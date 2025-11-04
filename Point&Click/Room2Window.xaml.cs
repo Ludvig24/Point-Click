@@ -60,7 +60,7 @@ namespace Point_Click
                 return;
             }
             int keycardID = 3;
-
+            InvListBox.Items.Add("Keycard");
             //Det er et keycard man får ud af kagen
             // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
             user.GetInventar().addItem(room2.ClickItem(keycardID)); 
@@ -92,6 +92,42 @@ namespace Point_Click
 
                 cakeActive = true; // og her gør vi at kagen er true, så vi kan bruge det senere
             }
+        }
+
+        private void ExitDoor_Click(object sender, RoutedEventArgs e)
+        {
+            if (InvListBox.SelectedItem == null)
+            {
+                return;
+            }
+            if (InvListBox.SelectedItem.ToString() != "Keycard") //findes Keycard?
+            {
+                return;
+            }
+           
+
+            Inventar inv;
+            inv = user.GetInventar();
+
+            inv.chooseItem(3);
+
+            if (inv.GetItemInUse() == null)
+            {
+                return;
+
+            }
+
+            
+            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 3) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
+            {
+                inv.deleteItem(3); 
+                user.SetInventar(inv); 
+                user.Move(room3.GetRoomID(), user, room1, room2, room3, AllItems);
+
+                this.Visibility = Visibility.Hidden; 
+
+            }
+
         }
     }
 }

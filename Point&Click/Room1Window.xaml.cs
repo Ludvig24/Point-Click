@@ -90,13 +90,11 @@ namespace Point_Click
                 //Vi har lavet if sætninger, der ser om vi har selected vores item, hvis vi har, så virker "døren"
             Inventar inv;           
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
-            //Mandagsproblem:
-            //////////////////
+           
             
-            inv.chooseItem(1); //choose skal egentlig ikke køre her, men i stedet når vi trykker på et bestemt item i vores inventar i WPF (Mandagsproblem)
+            inv.chooseItem(1);
                                
 
-            //////////////////
 
             if (inv.GetItemInUse() == null)//tjekker om der findes en item i ivn som er inUse - hvis ikke så returner vi ingenting for at hoppe ud af metoden 
             {

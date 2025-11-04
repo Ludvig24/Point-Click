@@ -48,7 +48,7 @@ namespace Point_Click
         public Item ClickItem(int itemID)
         {
             int i = 0;
-            while (itemList.Count > i)
+            while (i < itemList.Count)
             {
                 if (itemID == itemList[i].GetItemID())
                 {

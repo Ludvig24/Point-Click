@@ -31,7 +31,8 @@ namespace Point_Click
                     
                     break;
                 case 3:
-                   
+                    Endscreen Endscreen = new Endscreen();
+                    Endscreen.Show();
                     
                     break;
             }
