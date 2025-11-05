@@ -27,13 +27,13 @@ namespace Point_Click
             InitializeComponent();
         }
 
-        //Vores klik knap
+        //Vores klik knap, som lukker Windowet 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        //Vores return knap
+        //Vores return knap, som sender os tilbage til MainWindow.
         private void Return_Click(object sender, RoutedEventArgs e)
         {
             mainwindow.Show();

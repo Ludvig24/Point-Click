@@ -44,9 +44,7 @@ namespace Point_Click
             {
                 if (inventoryList[i].GetItemID()== itemID)
                 {
-                    inventoryList[i].SetinUse(true);
-                    //itemInUse = inventoryList[i];
-                    //itemInUse.SetinUse(true);
+                    inventoryList[i].SetinUse(true)
                 }
 
                 i++;
