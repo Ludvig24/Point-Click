@@ -9,7 +9,8 @@
     <Grid RenderTransformOrigin="0.574,0.502" Margin="-10,0,10,0">
         <Button x:Name="GoToRoom2" Content="" HorizontalAlignment="Left" Height="214" Margin="684,147,0,0" VerticalAlignment="Top" Width="116" Click="GoToRoom2_Click" ToolTip="Døren er låst, du skal bruge en nøgle"/>
         <Ellipse HorizontalAlignment="Left" Height="12" Margin="694,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="14"/>
-        <Button x:Name="Nøgle" Content="Nøgle" HorizontalAlignment="Left" Margin="167,147,0,0" VerticalAlignment="Top" Click="Nøgle_Click" Height="70" Width="104" ToolTip="Det er en nøgle, Den låser man døre op med.... duh" />
+        <Button x:Name="Nøgle" Content="Nøgle" Background= "Yellow"
+                HorizontalAlignment="Left" Margin="262,174,0,0" VerticalAlignment="Top" Click="Nøgle_Click" Height="22" Width="56" ToolTip="Det er en nøgle, Den låser man døre op med.... duh" />
 
         <ListBox Height="79" HorizontalAlignment="Left" Margin="226,283,0,0" x:Name="InvListBox" VerticalAlignment="Top" Width="350" >
             <ListBox.ItemsPanel>
@@ -25,7 +26,7 @@
 
 
         </ListBox>
-        <TextBlock HorizontalAlignment="Left" Margin="88,58,0,0" TextWrapping="Wrap" Text="Velkommen, du kan holde musen over objekterne for at få lidt information" VerticalAlignment="Top" Height="45" Width="230"/>
+        <TextBlock HorizontalAlignment="Left" Margin="88,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="230" TextAlignment="Justify"><Run Text="Velkommen, du kan holde musen over objekterne for at få lidt information"/><LineBreak/><Run Text="for at kunne anvende et item, skal du vælge det nede i din inventar."/><LineBreak/><Run/></TextBlock>
         <Rectangle HorizontalAlignment="Left" Height="79" Margin="278,282,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Opacity="0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -36,6 +37,8 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
+        <TextBlock HorizontalAlignment="Left" Margin="229,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Inventar"/>
+        <TextBox x:Name="KeyTeksBox" HorizontalAlignment="Center" Margin="0,362,0,0" TextWrapping="Wrap" Text="Du har tilføjet en nøgle til din inventory" VerticalAlignment="Top" Width="216" Height="26" TextChanged="KeyTeksBox_TextChanged" Visibility="Hidden"/>
     </Grid>
 
 </Window>
