@@ -49,7 +49,7 @@ namespace Point_Click
         {
             int ladderID = 2;
             Ladder.Visibility = Visibility.Hidden;
-            user.GetInventar().addItem(room2.ClickItem(ladderID));
+            user.GetInventar().AddItem(room2.ClickItem(ladderID));
             InvListBox.Items.Add(Ladder.Content);
         }
 
@@ -63,7 +63,7 @@ namespace Point_Click
             InvListBox.Items.Add("Keycard");
             //Det er et keycard man får ud af kagen
             // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
-            user.GetInventar().addItem(room2.ClickItem(keycardID));
+            user.GetInventar().AddItem(room2.ClickItem(keycardID));
             Kage.IsEnabled = false;
         }
 
@@ -82,12 +82,14 @@ namespace Point_Click
             //Har tilføjet det samme som da vi skulle igennem døren i rum 1, bare uden move
             Inventar inv;
             inv = user.GetInventar();
-            inv.chooseItem(2);
+            inv.ChooseItem(2);
 
-            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 2) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
+
+            //if statement der tjekker om det item i inventaret hvor boolen inUse er true og tjekker om det item er en ladder
+            if (inv.GetItemInUse() == AllItems[1]) 
             {
 
-                inv.deleteItem(2); // Kalder deleteItem() og sender 2 med som parameter
+                inv.DeleteItem(2); // Kalder deleteItem() og sender 2 med som parameter
                 user.SetInventar(inv); //Tildeler inv objektet til user objektets instans af Inventar med SetInventar() metoden
                 InvListBox.Items.RemoveAt(InvListBox.Items.IndexOf(InvListBox.SelectedItem));
 
@@ -110,18 +112,12 @@ namespace Point_Click
             Inventar inv;
             inv = user.GetInventar();
 
-            inv.chooseItem(3);
-
-            if (inv.GetItemInUse() == null)
-            {
-                return;
-
-            }
-
+            inv.ChooseItem(3);
             
-            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 3) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
+            //if statement der tjekker om det item i inventaret hvor boolen inUse er true og tjekker om det item er et keycard
+            if (inv.GetItemInUse() == AllItems[2]) 
             {
-                inv.deleteItem(3); 
+                inv.DeleteItem(3); 
                 user.SetInventar(inv); 
                 user.Move(room3.GetRoomID(), user, room1, room2, room3, AllItems);
 

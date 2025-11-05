@@ -10,7 +10,7 @@ namespace Point_Click
     internal class Item
     {
         private string name;
-        private int ItemID;
+        private int itemID;
         private bool inUse = false;
 
         public string GetName()
@@ -31,12 +31,12 @@ namespace Point_Click
         // Så man kan tilgå ItemID i andre klasser 
         public int GetItemID()
         {
-            return ItemID;
+            return itemID;
         }
 
-        public void SetItemID(int ItemID)
+        public void SetItemID(int itemID)
         {
-            this.ItemID = ItemID;
+            this.itemID = itemID;
 
         }
 

@@ -85,7 +85,7 @@ namespace Point_Click
                 return;//Her skal vi lave en kommentar om at døren er låst
             }
                      //Opretter instanser af klasserne Inventar og Item
-                if ( InvListBox.SelectedItem.ToString() != "Nøgle")
+            if (InvListBox.SelectedItem.ToString() != "Nøgle")
             { 
                 return;
             }
@@ -94,20 +94,14 @@ namespace Point_Click
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
            
             
-            inv.chooseItem(1);
-                               
+            inv.ChooseItem(1);
 
 
-            if (inv.GetItemInUse() == null)//tjekker om der findes en item i ivn som er inUse - hvis ikke så returner vi ingenting for at hoppe ud af metoden 
+
+            //if statement der tjekker om det item i inventaret hvor boolen inUse er true og tjekker om det item er en key
+            if (inv.GetItemInUse() == AllItems[0]) 
             {
-                return;
-
-            }
-
-            //If statement der checker om et Item objekt i Inventar objektet (inv) er inUse og om det bestemte Item objekts id er lig med 1 
-            if (inv.GetItemInUse().GetinUse() == true && inv.GetItemInUse().GetItemID() == 1) //GetInUse() returnerer om inUse variablen er true eller false. GetItemInUse() returner det Item objekt hvor boolen inUse er true.
-            {
-                inv.deleteItem(1); // Kalder deleteItem() og sender 1 med som parameter
+                inv.DeleteItem(1); // Kalder deleteItem() og sender 1 med som parameter
                 user.SetInventar(inv); //Tildeler inv objektet til user objektets instans af Inventar med SetInventar() metoden
                 user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems); //metoden Move() kaldes på user objektet. der sendes et roomId, User objekt, 3 Room objekter og en liste af Items med som parameter. Vi får roomId ved at kalde metoden GetRoomID() på objektet room2
 
@@ -122,7 +116,7 @@ namespace Point_Click
         {
             int nøgleID = 1; //opretter en int nøgleID og tildeler den 1
             //Får fat i user objektets Inventar objektet og tildeler den item der blev clicket på (nøglen) til inventaret
-            user.GetInventar().addItem(room1.ClickItem(nøgleID)); //kalder GetInventar() metoden på user objektet for at få det aktuelle inventar i useren. ClickItem kaldes på room1 objektet og nøgleID sendes som parameter - dette returnerer Item objektet der blev klikket på. addItem() metoden kaldes på Item objektet.
+            user.GetInventar().AddItem(room1.ClickItem(nøgleID)); //kalder GetInventar() metoden på user objektet for at få det aktuelle inventar i useren. ClickItem kaldes på room1 objektet og nøgleID sendes som parameter - dette returnerer Item objektet der blev klikket på. addItem() metoden kaldes på Item objektet.
             Nøgle.Visibility = Visibility.Hidden; // Sætter visibility for nøgle objektet i WPF vinduet til hidden
 
             InvListBox.Items.Add(Nøgle.Content);

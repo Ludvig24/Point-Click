@@ -16,7 +16,7 @@ namespace Point_Click
         private Item itemInUse = new Item();
 
         // Metode så man kan tilføje Item til ens Inventar
-        public void addItem(Item item)
+        public void AddItem(Item item)
         {
             inventoryList.Add(item);
         }
@@ -27,13 +27,13 @@ namespace Point_Click
         }
 
         //Metode så man sletter Item fra ens Inventar
-        public void deleteItem(int ItemID)
+        public void DeleteItem(int itemID)
         {
             int i = 0;
 
             while (i < inventoryList.Count)
             {
-                if (inventoryList[i].GetItemID()== ItemID)
+                if (inventoryList[i].GetItemID()== itemID)
                 {
                     inventoryList.Remove(inventoryList[i]);
                 }
@@ -43,13 +43,13 @@ namespace Point_Click
         }
 
         //Metode hvor man kan vælge et specifikt Item
-        public void chooseItem(int ItemID)
+        public void ChooseItem(int itemID)
         {
             int i = 0;
 
             while (i < inventoryList.Count)
             {
-                if (inventoryList[i].GetItemID()== ItemID)
+                if (inventoryList[i].GetItemID()== itemID)
                 {
                     inventoryList[i].SetinUse(true);
                     //itemInUse = inventoryList[i];
@@ -60,10 +60,7 @@ namespace Point_Click
         }
 
 
-        /*public Item GetItemInUse() 
-        {
-            return itemInUse;
-        }*/
+
 
         public Item GetItemInUse() 
         {
