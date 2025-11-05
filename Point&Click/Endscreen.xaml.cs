@@ -27,7 +27,7 @@ namespace Point_Click
             InitializeComponent();
         }
 
-        //Vores klik knap, som lukker Windowet 
+        //Vores klik knap, som lukker Windowet.
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
