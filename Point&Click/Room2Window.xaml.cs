@@ -51,6 +51,7 @@ namespace Point_Click
             Ladder.Visibility = Visibility.Hidden;
             user.GetInventar().AddItem(room2.ClickItem(ladderID));
             InvListBox.Items.Add(Ladder.Content);
+            StigeTeksBox.Visibility = Visibility.Visible;
         }
 
         private void Kage_Click(object sender, RoutedEventArgs e) //Når man clicker på kagen og går tilbage til rum 1, så driller den
@@ -65,6 +66,8 @@ namespace Point_Click
             // .Visibility = Visibility.Hidden; //Her kan vi ændre udsynet på kage
             user.GetInventar().AddItem(room2.ClickItem(keycardID));
             Kage.IsEnabled = false;
+            ExitBox.Background = Brushes.Green;
+            KeycardTextBox.Visibility = Visibility.Visible;
         }
 
         private void Shelf_Click(object sender, RoutedEventArgs e)
@@ -73,7 +76,7 @@ namespace Point_Click
             {
                 return;
             }
-            if (InvListBox.SelectedItem.ToString() != "Ladder")
+            if (InvListBox.SelectedItem.ToString() != "Stige")
             {
                 return;
             }
@@ -83,7 +86,7 @@ namespace Point_Click
             Inventar inv;
             inv = user.GetInventar();
             inv.ChooseItem(2);
-
+            StigeTeksBox.Visibility = Visibility.Hidden;
 
             //if statement der tjekker om det item i inventaret hvor boolen inUse er true og tjekker om det item er en ladder
             if (inv.GetItemInUse() == AllItems[1]) 
@@ -124,6 +127,16 @@ namespace Point_Click
                 this.Visibility = Visibility.Hidden; 
 
             }
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ExitBox.Background = Brushes.Red;
+        }
+
+        private void StigeTeksBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }

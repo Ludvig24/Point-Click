@@ -8,9 +8,9 @@
         Title="Room2Window" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.494,0.442">
         <Button x:Name="GoToRoom1" Content="" HorizontalAlignment="Left" Height="138" Margin="10,113,0,0" VerticalAlignment="Top" Width="75" Click="GoToRoom1_Click" ToolTip="Dette er en dør til det lokale du kom fra"/>
-        <Button x:Name="Ladder" Content="Ladder" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Height="39" Width="394" Click="Ladder_Click" ToolTip="Dette er en stige, den kan bruges til at nå høje ting"/>
-        <Button x:Name="Kage" Content="Kage" HorizontalAlignment="Left" Margin="429,74,0,0" VerticalAlignment="Top" Height="34" Width="52" Click="Kage_Click" ToolTip="Denne kage er godt nok højt oppe, men gad vide om der er noget inde i den"/>
-        <Button x:Name="Shelf" Content="(Hylde)" HorizontalAlignment="Left" Margin="356,108,0,0" VerticalAlignment="Top" Click="Shelf_Click" Width="198" Height="19" ToolTip="Du kan sku ikke nå uden hjælp"/>
+        <Button x:Name="Ladder" Content="Stige" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Height="39" Width="394" Click="Ladder_Click" ToolTip="Dette er en stige, den kan bruges til at nå høje ting"/>
+        <Button x:Name="Kage" Content="Kage" HorizontalAlignment="Left" Margin="429,74,0,0" VerticalAlignment="Top" Height="34" Width="52" Click="Kage_Click" ToolTip="Denne kage er godt nok højt oppe, men gad vide om der er noget inde i den" Background="HotPink"/>
+        <Button x:Name="Shelf" Content="Hylde" HorizontalAlignment="Left" Margin="356,108,0,0" VerticalAlignment="Top" Click="Shelf_Click" Width="198" Height="19" ToolTip="Du kan sku ikke nå uden hjælp" Background="SaddleBrown"/>
 
         <ListBox Height="79" HorizontalAlignment="Left" Margin="226,283,0,0" x:Name="InvListBox" VerticalAlignment="Top" Width="350" >
             <ListBox.ItemsPanel>
@@ -26,7 +26,7 @@
 
 
         </ListBox>
-        <Button x:Name="Ladder2" Content="Ladder" HorizontalAlignment="Left" Margin="382,188,0,0" VerticalAlignment="Top" Width="148" Height="22" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" ToolTip="Den stige har du placeret stabilt og godt">
+        <Button x:Name="Ladder2" Content="Stige" HorizontalAlignment="Left" Margin="382,188,0,0" VerticalAlignment="Top" Width="148" Height="22" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" ToolTip="Den stige har du placeret stabilt og godt">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,9 +37,14 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="ExitDoor" Content="" HorizontalAlignment="Left" Margin="689,98,0,0" VerticalAlignment="Top" Height="168" Width="80" Click="ExitDoor_Click" ToolTip="Døren er låst, du skal bruge et Keycard"/>
-        <TextBlock HorizontalAlignment="Left" Margin="720,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Exit"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="720,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
         <Rectangle HorizontalAlignment="Left" Height="14" Margin="689,175,0,0" Stroke="Black" VerticalAlignment="Top" Width="13"/>
         <Rectangle HorizontalAlignment="Left" Height="14" Margin="689,175,0,0" Stroke="Black" VerticalAlignment="Top" Width="7"/>
-        <TextBlock HorizontalAlignment="Left" Margin="229,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Inventory"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="229,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Inventar"/>
+        <TextBox x:Name="ExitBox" HorizontalAlignment="Left" Margin="716,80,0,0" TextWrapping="Wrap" Text="Exit" VerticalAlignment="Top" Width="26" TextChanged="TextBox_TextChanged"/>
+        <Rectangle HorizontalAlignment="Left" Height="16" Margin="452,58,0,0" Stroke="Black" VerticalAlignment="Top" Width="6"/>
+        <Rectangle HorizontalAlignment="Left" Height="6" Margin="453,52,0,0" Stroke="Orange" VerticalAlignment="Top" Width="4" Fill="Yellow" RenderTransformOrigin="-1.639,0.525" />
+        <TextBox x:Name="StigeTeksBox" HorizontalAlignment="Center" Margin="0,363,0,0" TextWrapping="Wrap" Text="Du har tilføjet en stige til din inventar" VerticalAlignment="Top" Width="205" Height="23" TextChanged="StigeTeksBox_TextChanged" Background="LightGray" Visibility="Hidden"/>
+        <TextBox x:Name="KeycardTextBox" HorizontalAlignment="Center" Margin="0,360,0,0" TextWrapping="Wrap" Text="Du har fundet et keycard i kagen" VerticalAlignment="Top" Width="180" Background="LightGray" Visibility="Hidden"/>
     </Grid>
 </Window>

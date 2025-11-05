@@ -9,6 +9,6 @@
     <Grid>
         <Button x:Name="Start" Content="Start" HorizontalAlignment="Center" Height="22" Margin="0,103,0,0" VerticalAlignment="Top" Width="80" Click="Start_Click"/>
         <Frame x:Name="FrameRoom1" ></Frame>
-        <TextBlock Margin="94,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="171" HorizontalAlignment="Left" TextAlignment="Justify"><Run Text="Velkommen til vores spil, det er blevet lavet med blod sved, tåre og kærlighed."/><LineBreak/><Run/><LineBreak/><Run Text="Det er et Point and Click spil så vær klar på at bruge dine hjernekræfter"/></TextBlock>
+        <TextBlock Margin="94,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="171" HorizontalAlignment="Left" TextAlignment="Justify"><Run Text="Velkommen til vores spil, det er blevet lavet med blod, sved, tåre og kærlighed."/><LineBreak/><Run/><LineBreak/><Run Text="Det er et Point and Click spil så vær klar på at bruge dine hjernekræfter."/></TextBlock>
     </Grid>
 </Window>
