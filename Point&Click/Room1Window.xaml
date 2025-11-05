@@ -25,7 +25,7 @@
 
 
         </ListBox>
-        <TextBlock HorizontalAlignment="Left" Margin="88,58,0,0" TextWrapping="Wrap" Text="Velkommen, du kan holde musen over objekterne for at få lidt information" VerticalAlignment="Top" Height="45" Width="230"/>
+        <TextBlock HorizontalAlignment="Left" Margin="88,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="230" TextAlignment="Justify"><Run Text="Velkommen, du kan holde musen over objekterne for at få lidt information"/><LineBreak/><Run Text="for at kunne anvende et item, skal du vælge det nede i din inventory."/><LineBreak/><Run/></TextBlock>
         <Rectangle HorizontalAlignment="Left" Height="79" Margin="278,282,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Opacity="0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -36,6 +36,8 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
+        <TextBlock HorizontalAlignment="Left" Margin="229,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Inventory"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="KeyTeksBox" HorizontalAlignment="Center" Margin="0,362,0,0" TextWrapping="Wrap" Text="Du har tilføjet en nøgle til din inventory" VerticalAlignment="Top" Width="215" Height="17" TextChanged="KeyTeksBox_TextChanged" Visibility="Hidden"/>
     </Grid>
 
 </Window>
