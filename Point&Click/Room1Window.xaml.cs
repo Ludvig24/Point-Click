@@ -85,13 +85,18 @@ namespace Point_Click
                 return;//Her skal vi lave en kommentar om at døren er låst
             }
                      //Opretter instanser af klasserne Inventar og Item
+<<<<<<< HEAD
             if (InvListBox.SelectedItem.ToString() != "Nøgle")
+=======
+            if ( InvListBox.SelectedItem.ToString() != "Nøgle")
+>>>>>>> 98268f3cfcc5c0935ee45f2abe03e62f12c4ee8c
             { 
                 return;
             }
                 //Vi har lavet if sætninger, der ser om vi har selected vores item, hvis vi har, så virker "døren"
             Inventar inv;           
             inv = user.GetInventar(); //Tildeler Inventar instansen det Inventar objekt i user objektet
+<<<<<<< HEAD
            
             
             inv.ChooseItem(1);
@@ -102,6 +107,15 @@ namespace Point_Click
             if (inv.GetItemInUse() == AllItems[0]) 
             {
                 inv.DeleteItem(1); // Kalder deleteItem() og sender 1 med som parameter
+=======
+
+            inv.chooseItem(1);
+
+            //If statement der henter det item i inv hvor boolen inUse er true og tjekker om det item er en key.
+            if (inv.GetItemInUse() == AllItems[0]) // GetItemInUse() returner det Item objekt hvor boolen inUse er true. AllItems er listen over alle items i spillet
+            {
+                inv.deleteItem(1); // Kalder deleteItem() og sender 1 med som parameter
+>>>>>>> 98268f3cfcc5c0935ee45f2abe03e62f12c4ee8c
                 user.SetInventar(inv); //Tildeler inv objektet til user objektets instans af Inventar med SetInventar() metoden
                 user.Move(room2.GetRoomID(), user, room1, room2, room3, AllItems); //metoden Move() kaldes på user objektet. der sendes et roomId, User objekt, 3 Room objekter og en liste af Items med som parameter. Vi får roomId ved at kalde metoden GetRoomID() på objektet room2
 
