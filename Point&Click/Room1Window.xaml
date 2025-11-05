@@ -26,7 +26,7 @@
 
 
         </ListBox>
-        <TextBlock HorizontalAlignment="Left" Margin="88,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="230" TextAlignment="Justify"><Run Text="Velkommen, du kan holde musen over objekterne for at få lidt information"/><LineBreak/><Run Text="for at kunne anvende et item, skal du vælge det nede i din inventar."/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="88,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="230" TextAlignment="Justify"><Run Text="Velkommen, du kan holde musen over objekterne for at få lidt information"/><Run Language="da-dk" Text="."/><LineBreak/><Run Language="da-dk" Text="F"/><Run Text="or at kunne anvende et item, skal du vælge det nede i di"/><Run Language="da-dk" Text="t"/><Run Text=" inventar."/><LineBreak/><Run/></TextBlock>
         <Rectangle HorizontalAlignment="Left" Height="79" Margin="278,282,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Opacity="0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
