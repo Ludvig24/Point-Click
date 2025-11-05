@@ -107,7 +107,7 @@ namespace Point_Click
             } 
         }
 
-        //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på.
+        //WPF click metode, der kører når en bestemt button i WPF vinduet trykkes på.
         private void Nøgle_Click(object sender, RoutedEventArgs e)
         {
             int nøgleID = 1; //opretter en int nøgleID og tildeler den 1.
