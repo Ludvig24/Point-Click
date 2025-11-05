@@ -56,7 +56,7 @@ namespace Point_Click
             item3.SetName("Keycard"); //Kalder SetName() metoden på item3 og sender parameteren "KeyCard" med
             item3.SetItemID(3); //Kalder SetItemID() metoden på item3 og sender parameteren 3 med
             
-            //kalder Add() på AllItems listen på de 3 objekter af Item klassen
+            //Kalder Add() på AllItems listen på de 3 objekter af Item klassen
             AllItems.Add(item1);
             AllItems.Add(item2);
             AllItems.Add(item3);
@@ -64,20 +64,16 @@ namespace Point_Click
             //Tildeler User et inventar
             user.SetInventar(inventar);
 
-
+            //Vi tildeler id'er og item objekter til rummene.
             room1.SetRoomID(1); //Kalder SetRoomID() metoden på room1 objektet og sender parameteren 1 med
             List<Item> room1ItemList = room1.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room1 objektet. Vi tildeler listen room1ItemList den liste der returneres af GetItemList() metoden.
             room1ItemList.Add(AllItems[0]); //Kalder add metoden på listen room1ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room1ItemList
 
-
-
-            
             room2.SetRoomID(2); //Kalder SetRoomID() metoden på room2 objektet og sender parameteren 2 med
             List<Item> room2ItemList = room2.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room2 objektet. Vi tildeler listen room2ItemList den liste der returneres af GetItemList() metoden.
             room2ItemList.Add(AllItems[0]); //Kalder add metoden på listen room2ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room2ItemList
             room2ItemList.Add(AllItems[1]); //Kalder add metoden på listen room2ItemList. Det item objekt i listen AllItems på index 1 tilføjes til listen room2ItemList
             room2ItemList.Add(AllItems[2]);
-
 
             room3.SetRoomID(3); //Kalder SetRoomID() metoden på room3 objektet og sender parameteren 3 med
             List<Item> room3ItemList = room3.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room3 objektet. Vi tildeler listen room3ItemList den liste der returneres af GetItemList() metoden.
@@ -86,8 +82,9 @@ namespace Point_Click
             room3ItemList.Add(AllItems[2]); //Kalder add metoden på listen room3ItemList. Det item objekt i listen AllItems på index 2 tilføjes til listen room3ItemList
 
         }
-        
-        internal Room GetRoom(int id) //opretter en public metode af typen Room vi kalder GetRoom() som tager en integer som parameter
+
+        //Opretter en public metode af typen Room vi kalder GetRoom() som tager en integer som parameter
+        internal Room GetRoom(int id) 
         {
             switch (id) //der køres et switch case statement på id variablet
             {
@@ -103,17 +100,17 @@ namespace Point_Click
             
         }
 
-        internal List<Item> GetItems() //opretter en public metode GetItems(). Metoden returnerer en liste af Item objekter
+        //Opretter en public metode GetItems(). Metoden returnerer en liste af Item objekter
+        internal List<Item> GetItems()
         {
             return AllItems; //metoden returnerer listen AllItems
         }
 
-      
-
-        private void Start_Click(object sender, RoutedEventArgs e) //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på
+        //WPF click metode der kører når en bestemt button i WPF vinduet trykkes på
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
-            
-            user.Move(room1.GetRoomID(), user, room1, room2, room3, AllItems); //metoden Move() kaldes på user objektet. der sendes et roomId, User objekt, 3 Room objekter og en liste af Items med som parameter. Vi får roomId ved at kalde metoden GetRoomID() på objektet room1
+            //Metoden Move() kaldes på user objektet. der sendes understående som parameter. Vi får roomId ved at kalde metoden GetRoomID() på objektet room1
+            user.Move(room1.GetRoomID(), user, room1, room2, room3, AllItems); 
             
             this.Visibility = Visibility.Hidden; //Vi sætter visibility for "this" som er WPF vinduet MainWindow til hidden hvilket lukker WPF vinduet
         }
