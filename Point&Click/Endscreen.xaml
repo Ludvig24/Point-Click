@@ -10,6 +10,7 @@
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="The End" VerticalAlignment="Center" Height="181" Width="404" FontSize="100"/>
         <Button x:Name="ExitButton" Content="Exit Game
 " HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Height="52" Width="142" Click="Button_Click"/>
+        <Button x:Name="Return" Content="Return" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Height="35" Width="68" Click="Return_Click"/>
 
     </Grid>
 </Window>

@@ -35,6 +35,11 @@ namespace Point_Click
                     Endscreen.Show();
                     
                     break;
+                case 4:
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+
+                    break;
             }
             //formålet er at returnere et roomID som vi kan bruge til at navigere mellem de rum vi har oprettet
         }

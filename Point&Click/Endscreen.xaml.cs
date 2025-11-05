@@ -19,6 +19,13 @@ namespace Point_Click
     /// </summary>
     public partial class Endscreen : Window
     {
+        User user;
+        MainWindow mainwindow = new MainWindow();
+        Room room1;
+        Room room2;
+        Room room3;
+        List<Item> AllItems;
+
         public Endscreen()
         {
             InitializeComponent();
@@ -27,6 +34,13 @@ namespace Point_Click
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+            mainwindow.Show();
+            this.Close();
+            
         }
     }
 }
