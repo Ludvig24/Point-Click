@@ -27,10 +27,11 @@ namespace Point_Click
             InitializeComponent();
         }
 
-        //Vores klik knap, som lukker Windowet.
+        //Vores klik knap, som lukker Windowet og afslutter programmet.
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
+            System.Windows.Application.Current.Shutdown();
         }
 
         //Vores return knap, som sender os tilbage til MainWindow.
