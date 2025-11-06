@@ -19,23 +19,21 @@ namespace Point_Click
     /// </summary>
     public partial class Endscreen : Window
     {
-        User user;
+        //Vores laver en instans af MainWindow.
         MainWindow mainwindow = new MainWindow();
-        Room room1;
-        Room room2;
-        Room room3;
-        List<Item> AllItems;
-
+     
         public Endscreen()
         {
             InitializeComponent();
         }
 
+        //Vores klik knap, som lukker Windowet.
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        //Vores return knap, som sender os tilbage til MainWindow.
         private void Return_Click(object sender, RoutedEventArgs e)
         {
             mainwindow.Show();

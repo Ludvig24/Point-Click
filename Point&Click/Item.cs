@@ -9,10 +9,14 @@ namespace Point_Click
 {
     internal class Item
     {
+        //Her er følgende field på vores klasse Item.
         private string name;
         private int itemID;
+
+        //Dette er et field, vi bruger til at skelne mellem, hvilket item som er i bruge.
         private bool inUse = false;
 
+        // Så man kan tilgå name i de andre klasser.
         public string GetName()
         {
             return name;
@@ -23,12 +27,7 @@ namespace Point_Click
             this.name = name;
         }
 
-        public void HoverItem()
-        {
-
-        }
-
-        // Så man kan tilgå ItemID i andre klasser 
+        // Så man kan tilgå ItemID i andre klasser.
         public int GetItemID()
         {
             return itemID;
@@ -40,7 +39,7 @@ namespace Point_Click
 
         }
 
-        // Så man kan tilgå inUse i andre klasse
+        // Så man kan tilgå inUse i andre klasser.
         public bool GetinUse()
         {
             return inUse;

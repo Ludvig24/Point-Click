@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Point_Click
 { 
-    // Vi har ændet klassen til public, fordi vores construtor i Window filen skabte accesebility problemer
-    // Vi er godt klar over at lave klassen til public nok ikke er det bedste vælg
-    // Men det løste et problem vi blev ved med at sidde fast i
-
+  
     internal class Inventar
     {
+        //Her er følgende fields på klassen Item.
         private List<Item> inventoryList = new List<Item>();
         private Item itemInUse = new Item();
 
@@ -19,11 +17,6 @@ namespace Point_Click
         public void AddItem(Item item)
         {
             inventoryList.Add(item);
-        }
-
-        public List<Item> GetInventoryList()
-        {
-            return inventoryList;
         }
 
         //Metode så man sletter Item fra ens Inventar
@@ -52,41 +45,34 @@ namespace Point_Click
                 if (inventoryList[i].GetItemID()== itemID)
                 {
                     inventoryList[i].SetinUse(true);
-                    //itemInUse = inventoryList[i];
-                    //itemInUse.SetinUse(true);
                 }
+
                 i++;
             }
         }
 
+        //Så man kan tilgå InventoryList i andre klasser.
+        public List<Item> GetInventoryList()
+        {
+            return inventoryList;
+        }
 
-
-
+        //Så man kan tilgå Item,hvor boolen inUse er true.
         public Item GetItemInUse() 
         {
             int i = 0;
-          while(i < inventoryList.Count)
+            while(i < inventoryList.Count)
             {
                 if (inventoryList[i].GetinUse() == true) 
                 {
-                 return inventoryList[i];
+                    return inventoryList[i];
                 }
+
                 i++;
             }
           
-          return null;
+            return null;
 
         }
-
-
-        /// <Note>
-        /// Indtilvidere så når vi går ind i et nyt rum, så er inventorien tømt, så vi ikke skal implimentere at man gemmer items fra rum til rum
-        /// og hvert lokale ikke behøver at blive resettet
-        /// det vælger vi ud fra om det bliver et langt spil så der er brug for funktionen
-
-       
-       
-        
-
     }
 }

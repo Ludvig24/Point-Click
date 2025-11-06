@@ -44,7 +44,7 @@
         <TextBox x:Name="ExitBox" HorizontalAlignment="Left" Margin="716,80,0,0" TextWrapping="Wrap" Text="Exit" VerticalAlignment="Top" Width="26" TextChanged="TextBox_TextChanged"/>
         <Rectangle HorizontalAlignment="Left" Height="16" Margin="452,58,0,0" Stroke="Black" VerticalAlignment="Top" Width="6"/>
         <Rectangle HorizontalAlignment="Left" Height="6" Margin="453,52,0,0" Stroke="Orange" VerticalAlignment="Top" Width="4" Fill="Yellow" RenderTransformOrigin="-1.639,0.525" />
-        <TextBox x:Name="StigeTeksBox" HorizontalAlignment="Center" Margin="0,363,0,0" TextWrapping="Wrap" Text="Du har tilføjet en stige til din inventar" VerticalAlignment="Top" Width="205" Height="23" TextChanged="StigeTeksBox_TextChanged" Background="LightGray" Visibility="Hidden"/>
+        <TextBox x:Name="StigeTeksBox" HorizontalAlignment="Center" Margin="0,363,0,0" TextWrapping="Wrap" Text="Du har tilføjet en stige til din inventar" VerticalAlignment="Top" Width="205" Height="23" Background="LightGray" Visibility="Hidden"/>
         <TextBox x:Name="KeycardTextBox" HorizontalAlignment="Center" Margin="0,360,0,0" TextWrapping="Wrap" Text="Du har fundet et keycard i kagen" VerticalAlignment="Top" Width="180" Background="LightGray" Visibility="Hidden"/>
     </Grid>
 </Window>
