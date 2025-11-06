@@ -92,7 +92,7 @@ namespace Point_Click
             inv.ChooseItem(1);
 
             //If statement der henter det item i inv, hvor boolen inUse er true og tjekker om det item er en key.
-            if (inv.GetItemInUse() == AllItems[0]) // GetItemInUse() returner det Item objekt hvor boolen inUse er true. AllItems er listen over alle items i spillet.
+            if (inv.GetItemInUse().GetItemID() == AllItems[0].GetItemID()) // GetItemInUse() returner det Item objekt hvor boolen inUse er true. AllItems er listen over alle items i spillet.
             {
                 inv.DeleteItem(1); // Kalder deleteItem() og sender 1 med som parameter.
 

@@ -20,11 +20,7 @@ namespace Point_Click
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Opretter 3 objekter af klassen Item 
-        Item item1 = new Item();  
-        Item item2 = new Item();
-        Item item3 = new Item();
-
+   
         //Opretter 3 objekter af klassen Room
         Room room1 = new Room();
         Room room2 = new Room();
@@ -43,43 +39,22 @@ namespace Point_Click
         {
             InitializeComponent();
 
-            //Tildeler det første Item objekt et navn og et Id
-            item1.SetName("Key"); //Kalder SetName() metoden på item1 og sender parameteren "Key" med
-            item1.SetItemID(1); //Kalder metoden SetItemID() på item1 og sender parameteren 1 med
-            
-            //Tildeler item2 objektet et navn og et Id
-            item2.SetName("Ladder"); //Kalder SetName() metoden på item2 og sender parameteren "Ladder" med
-            item2.SetItemID(2); //Kalder SetItemID() metoden på item2 og sender parameteren 2 med
-            
-            //Tildeler item3 objektet et navn og et Id
-            item3.SetName("Keycard"); //Kalder SetName() metoden på item3 og sender parameteren "KeyCard" med
-            item3.SetItemID(3); //Kalder SetItemID() metoden på item3 og sender parameteren 3 med
-            
-            //Kalder Add() på AllItems listen på de 3 objekter af Item klassen
-            AllItems.Add(item1);
-            AllItems.Add(item2);
-            AllItems.Add(item3);
+            //Kalder CreateItem() på room1 og room2. Tildeler hvert room et ID
+            room1.CreateItem(1, "Key");
+            room1.SetRoomID(1);
+
+            room2.CreateItem(1, "Key");
+            room2.CreateItem(2, "Ladder");
+            room2.CreateItem(3, "Keycard");
+            room2.SetRoomID(2);
+
+            room3.SetRoomID(3);
+
+            //Tildeler AllItems alle items i room2
+            AllItems = room2.GetItemList();
 
             //Tildeler User et inventar
             user.SetInventar(inventar);
-
-            //Vi tildeler id'er og item objekter til rummene.
-            room1.SetRoomID(1); //Kalder SetRoomID() metoden på room1 objektet og sender parameteren 1 med
-            List<Item> room1ItemList = room1.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room1 objektet. Vi tildeler listen room1ItemList den liste der returneres af GetItemList() metoden.
-            room1ItemList.Add(AllItems[0]); //Kalder add metoden på listen room1ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room1ItemList
-
-            room2.SetRoomID(2); //Kalder SetRoomID() metoden på room2 objektet og sender parameteren 2 med
-            List<Item> room2ItemList = room2.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room2 objektet. Vi tildeler listen room2ItemList den liste der returneres af GetItemList() metoden.
-            room2ItemList.Add(AllItems[0]); //Kalder add metoden på listen room2ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room2ItemList
-            room2ItemList.Add(AllItems[1]); //Kalder add metoden på listen room2ItemList. Det item objekt i listen AllItems på index 1 tilføjes til listen room2ItemList
-            room2ItemList.Add(AllItems[2]);
-
-            room3.SetRoomID(3); //Kalder SetRoomID() metoden på room3 objektet og sender parameteren 3 med
-            List<Item> room3ItemList = room3.GetItemList(); //Opretter en liste af typen Item. Vi kalder metoden GetItemList på room3 objektet. Vi tildeler listen room3ItemList den liste der returneres af GetItemList() metoden.
-            room3ItemList.Add(AllItems[0]); //Kalder add metoden på listen room3ItemList. Det item objekt i listen AllItems på index 0 tilføjes til listen room3ItemList
-            room3ItemList.Add(AllItems[1]); //Kalder add metoden på listen room3ItemList. Det item objekt i listen AllItems på index 1 tilføjes til listen room3ItemList
-            room3ItemList.Add(AllItems[2]); //Kalder add metoden på listen room3ItemList. Det item objekt i listen AllItems på index 2 tilføjes til listen room3ItemList
-
         }
 
         //Opretter en public metode af typen Room vi kalder GetRoom() som tager en integer som parameter

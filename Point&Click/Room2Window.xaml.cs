@@ -129,7 +129,7 @@ namespace Point_Click
             inv.ChooseItem(3);
             
             //if statement der tjekker om det item i inventaret hvor boolen inUse er true og tjekker om det item er et keycard
-            if (inv.GetItemInUse() == AllItems[2]) 
+            if (inv.GetItemInUse().GetItemID() == AllItems[2].GetItemID()) 
             {
                 inv.DeleteItem(3); // Kalder DeleteItem() og sender 3 med som parameter
                 user.SetInventar(inv); 

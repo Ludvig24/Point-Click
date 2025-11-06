@@ -11,7 +11,7 @@ namespace Point_Click
     {
         //Her er følgende fields på klassen Item.
         private List<Item> inventoryList = new List<Item>();
-        private Item itemInUse = new Item();
+        
 
         // Metode så man kan tilføje Item til ens Inventar
         public void AddItem(Item item)
